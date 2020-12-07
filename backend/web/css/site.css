@@ -1,0 +1,121 @@
+html,
+body {
+    height: 100%;
+}
+.wrapper{
+    width:100%;
+}
+@media(max-width:992px){
+    .wrapper{
+        width:100%;
+    }
+}
+.panel-heading {
+    padding: 0;
+    border:0;
+}
+.panel-title>a, .panel-title>a:active{
+    display:block;
+    padding:15px;
+    color:#555;
+    font-size:16px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    word-spacing:3px;
+    text-decoration:none;
+}
+.panel-heading  a:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    float: right;
+    transition: all 0.5s;
+}
+.panel-heading.active a:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+.slider {
+    width: 100%;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.slider::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 156, 163,0.3);
+    z-index: 22;
+}
+
+
+.slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.knopka{
+    z-index: 24;
+    position: relative;
+}
+.section-inside{
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    width: 400px;
+    height: 200px;
+    z-index: 23;
+
+}
+.section-inside h2{
+    font-size: 32px;
+    color: white;
+    font-family: 'Roboto';
+
+}
+.section-inside a{
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(0, 156, 163,0.5);
+
+}
+.section-inside a:hover{
+    color: white;
+    background-color: rgb(0, 156, 163);
+}
+.slider-wrapper {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.slide {
+    float: left;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+    opacity: 1;
+}
+@media only screen and (max-width:991px) {
+    .slider-wrapper {
+        height: 500px;
+    }
+}
+@media only screen and (max-width:576px) {
+    .slider-wrapper {
+        height: 300px;
+    }
+}
